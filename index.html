@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Bootstrap -->	
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	
+	<!-- El estilo -->
+	<link rel="stylesheet" href="css/estilo.css"/>
+	
+	<!-- El FileSaver con su Blob para guardar texto -->
+	<script src='js/Blob.js'></script>
+	<script src='js/Filesaver.min.js'></script>
+	
+	<!-- JQuery -->
+	<script src='js/jquery-3.3.1.js' type='text/javascript'></script>
+	<script src='js/jquery-ui.js' type='text/javascript'></script>
+	<script src='js/jquery-ui.min.js'></script>
+	
+	<!-- El script -->	
+	<script src='js/script.js' type='text/javascript'></script>
+	
+</head>
+
+<body>
+
+<!-- La ventana de inicio -->
+
+<div id="inicio" class="text-center" class="text-center" style="margin-top:15%;">
+
+<h1>Ingresa los datos solicitados y presiona el botón para iniciar</h1><br>
+
+<div class="mx-auto" style="width: 80%;">
+<div class="form-row">
+<div class="form-group col-md-9"><input id="codigoSujeto" type="text" class="form-control" placeholder="Código proporcionado" required></div>
+<div class="form-group col-md-3"><input id="edadSujeto" type="number" class="form-control" placeholder="Edad" min="10" max="99" required></div>
+</div>
+
+<div class="form-group row">
+<div class="form-check col-md-6"><input id="r1" type="radio" value="Mujer" class="form-check-input" name="sexo" checked><label class="form-check-label" for="r1">Mujer</label></div>
+<div class="form-check col-md-6"><input id="r2" type="radio" value="Hombre" class="form-check-input" name="sexo"><label class="form-check-label" for="r1">Hombre</label></div>
+</div>
+
+<div class="form-group" style="margin-top: 50px;">
+<button id="btnIniciar" type="button" class="btn btn-primary btn-block" style="margin-top:20px;">Iniciar</button>
+</div>
+
+</div>
+
+</div>
+
+<!-- La ventana de fin -->
+
+<div id="fin" class="text-center" style="display:none;">
+
+<h1 class="text-center" style="margin-top:15%;">Gracias por tu participación</h1><br>
+<h3 class="text-center" style="margin-top:10px; display:inline;">Avísa a los encargados y no cierres esta ventana</h3><br>
+<button id="descarga" class="btn btn-primary btn-lg" style="margin-top:20px;">Descargar resultados</button>
+</div>
+
+<!-- El contenido -->
+
+<div id="marco" oncontextmenu="return false">
+	
+	<!--Audio-->
+	<audio id="sonidoSirena">
+	<source src="audio/sirena.mp3" type="audio/mpeg">
+	No se pudo reproducir el audio.
+	</audio>
+	
+	<audio id="sonidoAltavozVerde">
+	<source src="audio/av.mp3" type="audio/mpeg">
+	No se pudo reproducir el audio.
+	</audio>
+	
+	<audio id="sonidoAltavozNaranja">
+	<source src="audio/an.mp3" type="audio/mpeg">
+	No se pudo reproducir el audio.
+	</audio>
+	
+	<!--Demás bloques-->
+	
+	<div id="bloquecronometro">
+		<p id="txtcronometro"></p>
+	</div>
+	
+	<div id="bloqueimagen">
+		<img id="imgimagen" src="img/1.jpg">
+		<img id="imgmancha" src="img/mancha.png">
+	</div>
+		
+	<div id="bloqueclip">
+		<img id="imgclip" src="img/clip.png" draggable="false">
+	</div>
+	
+	<div id="bloquecontroles">
+	<table>
+	<tr>
+	<td><div class="control" id="circulo"></div></td>
+	<td><div class="control" id="cuadrado"></div></td>
+	</tr>
+	<tr>
+	<td><img class="control" id="av" src="img/av.jpg"></td>
+	<td><img class="control" id="an" src="img/an.jpg"></td>
+	</tr>
+	</table>
+	</div>
+
+</div>
+</body>
+
+</html>
