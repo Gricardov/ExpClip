@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 			// Para el cronómetro
 			const cronometroMinutos = 0;
-			const cronometroSegundos = 2;
+			const cronometroSegundos = 30;
 
 			// Tipos de aparición (no tocar). MANCHA=1 y SIRENA=2
 			const MANCHA = 1;
